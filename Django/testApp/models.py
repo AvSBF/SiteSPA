@@ -11,12 +11,13 @@ class User(AbstractUser):
 
 class Profile(models.Model):
    firstName = models.CharField("First Name", max_length=50)
+   nickname = models.CharField("nickname", max_length=10, null = True)
    secondName = models.CharField("Second Name", max_length=50)
    age = models.IntegerField(default=0)
    agent = models.ForeignKey("Agent", on_delete=models.CASCADE)
 
    def __str__(self):
-      return f"{self.firstName} {self.secondName}"
+      return f"{self.firstName} '{self.nickname}' {self.secondName}"
 
 class Agent(models.Model):
    user = models.OneToOneField(User, on_delete=models.CASCADE)
