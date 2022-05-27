@@ -7,6 +7,10 @@
   transition: all 0.3s ease 0s;
 }
 
+.MAIN_ARTICLE{
+  margin-top: 200px;
+}
+
 body {
   font-family: Poppins;
   display: -webkit-box;
