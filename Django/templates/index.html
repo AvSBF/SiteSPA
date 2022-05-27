@@ -12,9 +12,6 @@
    </head>
    <body>
       <header class="header">
-         <h1 class="MAIN_ARTICLE">
-            <a href="/learn" class="linker" >Please Head to the learning section</a>
-         </h1>
          <div class="burger">
             <span></span>
          </div>
@@ -36,6 +33,9 @@
          </div>         
       </header>
       <div id="character" class="callbacks container">
+         <h1 class="MAIN_ARTICLE">
+            <a href="/learn" class="linker" >Please Head to the learning section</a>
+         </h1>
          <h3 class="character__main-title">character</h3>
          <h4 class="callbacks__title">
             I asked my friends to tell me, what do they think about my personality. <br>Here's what I've got
@@ -78,7 +78,7 @@
       </div>
 
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-   <script src="js/burger.js"></script> 
+   <script src="{% static 'js/burger.js' %}"></script> 
    </body>
-   <script src="js/anchor.js"></script>
+   <script src="{% static 'js/anchor.js' %}"></script>
 </html>
