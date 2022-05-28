@@ -10,5 +10,15 @@
    <a href="/learn">Return</a>
    <hr />
    Hello {{ profile.firstName }} "{{profile.nickname}}" {{ profile.secondName}}
+   <br>
+   your agent is {{profile.agent}}
+   <br>
+   your age is {{profile.age}}
+   <br>
+   your nick is {{profile.nickname}}
+   <hr />
+   <a href="{% url 'profile:delete-profile' profile.pk %} ">Delete</a>
+   <br><br>   
+   <a href="{% url 'profile:update-profile' profile.pk %} ">Update</a>
 </body>
 </html>

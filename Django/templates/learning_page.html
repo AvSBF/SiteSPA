@@ -9,6 +9,9 @@
 <body>
    <header><h1 class="article">there will be some learning progressions</h1></header>
    <main>
+      <hr />
+      <a href="{% url 'profile:create-profile' %}">Create new PROFILE</a>
+      <hr />
       <ul class="list">
          {% for profile in profiles %}
          <li class="list__item"><a href="{% url 'profile:curr-profile' profile.pk %}">{{profile}}</a></li>
