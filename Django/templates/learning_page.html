@@ -11,7 +11,7 @@
    <main>
       <ul class="list">
          {% for profile in profiles %}
-         <li class="list__item">{{profile}}</li>
+         <li class="list__item"><a href="{% url 'profile:curr-profile' profile.pk %}">{{profile}}</a></li>
          {% endfor %}
       </ul>
    </main>
