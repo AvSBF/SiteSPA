@@ -28,7 +28,7 @@ def curr_profile(request, pk):
    }
    return render(request, "detailed-profile.html", context=context )
 
-def delete_profile(reques, pk):
+def delete_profile(request, pk):
    profile = Profile.objects.get(id=pk)
    profile.delete()
    return redirect("/learn")
