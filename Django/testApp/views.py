@@ -47,19 +47,11 @@ def create_profile(request):
 
 def update_profile(request, pk):
    profile = Profile.objects.get(id=pk)
-   form = ProfileModelForm()
+   form = ProfileModelForm(instance=profile)
    if request.method == "POST":
-      form = ProfileModelForm(request.POST)
+      form = ProfileModelForm(request.POST, instance=profile)
       if form.is_valid():
-         firstName = form.cleaned_data['firstName']
-         secondName = form.cleaned_data['secondName']
-         nickname = form.cleaned_data['nickname']
-         age = form.cleaned_data['age']
-         profile.firstName = firstName
-         profile.secondName = secondName
-         profile.age = age
-         profile.nickname  = nickname
-         profile.save()
+         form.save()
          return redirect("/learn")
    context = {
       'profile': profile,
